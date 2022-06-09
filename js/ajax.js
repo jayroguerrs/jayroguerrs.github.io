@@ -1,15 +1,5 @@
 $(document).ready(function() {
-// AJAX para traer roles
-    $.ajax({
-        type: "GET",       
-        url: "https://sheets.googleapis.com/v4/spreadsheets/1Gp07yORfp13NIT4oGtP5fJL6y_8mc1dL_waJaWuFayk/values/ROLES!A2:B?key=AIzaSyC8XQRBD6HJt8lgLwk7cT6goBpv9-f6NzI",
-        dataType: 'json',
-        success: function(data) {            
-            data.values.forEach(function(dato) { 
-                $("select#rol-select").append("<option id='" + dato[0] + "'>" + dato[1] + "</option>");                
-            });
-        }                   
-    });
+    
 
     // AJAX para traer oficinas
     $.ajax({
