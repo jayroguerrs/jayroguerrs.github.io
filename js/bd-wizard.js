@@ -3,8 +3,31 @@
 $("#wizard").steps({
     headerTag: "h3",
     bodyTag: "section",
-    transitionEffect: "none",
-    titleTemplate: '#title#'
+    transitionEffect: "fade",    
+    titleTemplate: '#title#',
+
+    enableFinishButton: true,
+    transitionEffectSpeed: 500,
+    saveState: true,
+    onStepChanging: function (event, currentIndex, newIndex) { 
+        return true;
+    },
+    onFinishing: function (event, currentIndex){        
+        return true;
+    },
+    onFinished: function (event, currentIndex) {          
+        
+    },
+    /* Labels */
+    labels: {
+        cancel: "Cancelar",
+        current: "Paso actual:",
+        pagination: "Paginación",
+        finish: "Finalizar",
+        next: "Siguiente",
+        previous: "Anterior",
+        loading: "Cargando ..."
+    }
 });
 
 //Form control
