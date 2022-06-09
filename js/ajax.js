@@ -2,11 +2,11 @@ $(document).ready(function() {
     // AJAX para traer roles
     $.ajax({
         type: "GET",       
-        url: "https://sheets.googleapis.com/v4/spreadsheets/1Gp07yORfp13NIT4oGtP5fJL6y_8mc1dL_waJaWuFayk/values/ROLES!A2:D?key=AIzaSyC8XQRBD6HJt8lgLwk7cT6goBpv9-f6NzI",
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1Gp07yORfp13NIT4oGtP5fJL6y_8mc1dL_waJaWuFayk/values/ROLES!A2:C?key=AIzaSyC8XQRBD6HJt8lgLwk7cT6goBpv9-f6NzI",
         dataType: 'json',
         success: function(data) {            
             data.values.forEach(function(dato) { 
-                $("select#rol-select").append("<option id='" + dato[0] + "'>" + dato[1] + "</option>");                
+                $("select#rol-select").append("<option id='" + dato[0] + "'kit='" + dato[2] + "'>" + dato[1] + "</option>");                
             });
         }                   
     });
@@ -25,7 +25,7 @@ $(document).ready(function() {
     
     
     
-    // Para el modelo 'PREGUNTAS'
+    // Cuando se desgloza OFICINA
     $('select#oficina-select').on('change', function(e){
         e.preventDefault();
         //var optionSelected = $("option:selected", this);
@@ -33,6 +33,14 @@ $(document).ready(function() {
         var zona = $(this).children(":selected").attr("zona");
         $('input#region').val(region);
         $('input#zona').val(zona);
+    });
+
+    // Cuando se desgloza 
+    $('select#rol-select').on('change', function(e){
+        e.preventDefault();
+        //var optionSelected = $("option:selected", this);
+        var kit = $(this).children(":selected").attr("kit");        
+        $('input#kit').val(kit);
     });
 })
 
