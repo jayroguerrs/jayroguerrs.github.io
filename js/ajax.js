@@ -1,21 +1,38 @@
 $(document).ready(function() {
+// AJAX para traer roles
     $.ajax({
         type: "GET",       
-        url: "https://sheets.googleapis.com/v4/spreadsheets/1Gp07yORfp13NIT4oGtP5fJL6y_8mc1dL_waJaWuFayk/values/OFICINAS!A2:C?key=AIzaSyC8XQRBD6HJt8lgLwk7cT6goBpv9-f6NzI",
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1Gp07yORfp13NIT4oGtP5fJL6y_8mc1dL_waJaWuFayk/values/ROLES!A2:B?key=AIzaSyC8XQRBD6HJt8lgLwk7cT6goBpv9-f6NzI",
         dataType: 'json',
         success: function(data) {            
             data.values.forEach(function(dato) { 
-                $("select#colaborador-select").append("<option id='" + dato[0] + "' region='" + dato[2] + "'>" + dato[1] + "</option>");
+                $("select#rol-select").append("<option id='" + dato[0] + "'>" + dato[1] + "</option>");                
             });
         }                   
     });
 
+    // AJAX para traer oficinas
+    $.ajax({
+        type: "GET",       
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1Gp07yORfp13NIT4oGtP5fJL6y_8mc1dL_waJaWuFayk/values/OFICINAS!A2:D?key=AIzaSyC8XQRBD6HJt8lgLwk7cT6goBpv9-f6NzI",
+        dataType: 'json',
+        success: function(data) {            
+            data.values.forEach(function(dato) { 
+                $("select#oficina-select").append("<option id='" + dato[0] + "' region='" + dato[2] + "' zona='" + dato[3] + "'>" + dato[1] + "</option>");                
+            });
+        }                   
+    });
+    
+    
+    
     // Para el modelo 'PREGUNTAS'
-    $('select#colaborador-select').on('change', function(e){
+    $('select#oficina-select').on('change', function(e){
         e.preventDefault();
         //var optionSelected = $("option:selected", this);
         var region = $(this).children(":selected").attr("region");
+        var zona = $(this).children(":selected").attr("zona");
         $('input#region').val(region);
+        $('input#zona').val(zona);
     });
 })
 
