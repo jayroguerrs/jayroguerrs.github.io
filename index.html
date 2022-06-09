@@ -150,22 +150,545 @@
           <div class="media">
             <div class="bd-wizard-step-icon"><i class="mdi mdi-account-check-outline"></i></div>
             <div class="media-body">
-              <div class="bd-wizard-step-title">Review </div>
-              <div class="bd-wizard-step-subtitle">Step 3</div>
+              <div class="bd-wizard-step-title">Kit</div>
+              <div class="bd-wizard-step-subtitle">Paso 3</div>
             </div>
           </div>
         </h3>
         <section>
           <div class="content-wrapper">
-          <h4 class="section-heading mb-5">Review your Details</h4>
-          <h6 class="font-weight-bold">Personal Details</h6>
-          <p class="mb-4"><span id="enteredFirstName">Cha</span> <span id="enteredLastName">Ji-Hun C</span> <br>
-            Phone: <span id="enteredPhoneNumber">+230-582-6609</span> <br>
-            Email: <span id="enteredEmailAddress">willms_abby@gmail.com</span></p>
-          <h6 class="font-weight-bold">Employment Details</h6>
-          <p class="mb-0"><span id="enteredDesignation">Junior Developer</span> - <span id="enteredDepartment">UI Development</span> <br>
-            Phone: <span id="enteredEmployeeNumber">JDUI36849</span> <br>
-            Email: <span id="enteredWorkEmailAddress">willms_abby@company.com</span></p>
+            <h4 class="section-heading mb-5">Información sobre el kit de uniforme</h4>
+            
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="kit">Tipo de KIT</label>
+                <input type="text" name="kit" id="kit" class="form-control" placeholder="Ejemplo: KIT 1" readonly>            
+              </div>
+            </div>
+
+            <!-- Talla para saco -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="opt-saco">Seleccione la talla de su saco</label>
+                  <div class="purpose-radios-wrapper">
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-2xs" class="purpose-radio-input" value="2XS">
+                      <label for="opt-saco-2xs" class="purpose-radio-label">
+                        <span class="label-text">2XS</span>
+                      </label>
+                    </div>
+                    
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-xs" class="purpose-radio-input" value="XS">
+                      <label for="opt-saco-xs" class="purpose-radio-label">
+                        <span class="label-text">XS</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-s" class="purpose-radio-input" value="S">
+                      <label for="opt-saco-s" class="purpose-radio-label">
+                        <span class="label-text">S</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-m" class="purpose-radio-input" value="M">
+                      <label for="opt-saco-m" class="purpose-radio-label">
+                        <span class="label-text">M</span>
+                      </label>
+                    </div>
+
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-l" class="purpose-radio-input" value="L">
+                      <label for="opt-saco-l" class="purpose-radio-label">
+                        <span class="label-text">L</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-xl" class="purpose-radio-input" value="XL">
+                      <label for="opt-saco-xl" class="purpose-radio-label">
+                        <span class="label-text">XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-2xl" class="purpose-radio-input" value="2XL">
+                      <label for="opt-saco-2xl" class="purpose-radio-label">
+                        <span class="label-text">2XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-3xl" class="purpose-radio-input" value="3XL">
+                      <label for="opt-saco-3xl" class="purpose-radio-label">
+                        <span class="label-text">3XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-saco" id="opt-saco-4xl" class="purpose-radio-input" value="4XL">
+                      <label for="opt-saco-4xl" class="purpose-radio-label">
+                        <span class="label-text">4XL</span>
+                      </label>
+                    </div>              
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Talla para camisa -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="opt-camisa">Seleccione la talla de su camisa</label>
+                  <div class="purpose-radios-wrapper">
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-14-5" class="purpose-radio-input" value="14.5">
+                      <label for="opt-camisa-14-5" class="purpose-radio-label">
+                        <span class="label-text">14.5</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-15" class="purpose-radio-input" value="15">
+                      <label for="opt-camisa-15" class="purpose-radio-label">
+                        <span class="label-text">15</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-15-5" class="purpose-radio-input" value="15.5">
+                      <label for="opt-camisa-15-5" class="purpose-radio-label">
+                        <span class="label-text">15.5</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-16" class="purpose-radio-input" value="16">
+                      <label for="opt-camisa-16" class="purpose-radio-label">
+                        <span class="label-text">16</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-16-5" class="purpose-radio-input" value="16.5">
+                      <label for="opt-camisa-16-5" class="purpose-radio-label">
+                        <span class="label-text">16.5</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-17" class="purpose-radio-input" value="17">
+                      <label for="opt-camisa-17" class="purpose-radio-label">
+                        <span class="label-text">17</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-17-5" class="purpose-radio-input" value="17.5">
+                      <label for="opt-camisa-17-5" class="purpose-radio-label">
+                        <span class="label-text">17.5</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-18" class="purpose-radio-input" value="18">
+                      <label for="opt-camisa-18" class="purpose-radio-label">
+                        <span class="label-text">18</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-18-5" class="purpose-radio-input" value="18.5">
+                      <label for="opt-camisa-18-5" class="purpose-radio-label">
+                        <span class="label-text">18.5</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-19" class="purpose-radio-input" value="19">
+                      <label for="opt-camisa-19" class="purpose-radio-label">
+                        <span class="label-text">19</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-19-5" class="purpose-radio-input" value="19.5">
+                      <label for="opt-camisa-19-5" class="purpose-radio-label">
+                        <span class="label-text">19.5</span>
+                      </label>
+                    </div>
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-camisa" id="opt-camisa-20" class="purpose-radio-input" value="20">
+                      <label for="opt-camisa-20" class="purpose-radio-label">
+                        <span class="label-text">20</span>
+                      </label>
+                    </div>
+                    
+                                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Talla para chalecos -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="opt-chaleco">Seleccione la talla de su chaleco</label>
+                  <div class="purpose-radios-wrapper">
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-2xs" class="purpose-radio-input" value="2XS">
+                      <label for="opt-chaleco-2xs" class="purpose-radio-label">
+                        <span class="label-text">2XS</span>
+                      </label>
+                    </div>
+                    
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-xs" class="purpose-radio-input" value="XS">
+                      <label for="opt-chaleco-xs" class="purpose-radio-label">
+                        <span class="label-text">XS</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-s" class="purpose-radio-input" value="S">
+                      <label for="opt-chaleco-s" class="purpose-radio-label">
+                        <span class="label-text">S</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-m" class="purpose-radio-input" value="M">
+                      <label for="opt-chaleco-m" class="purpose-radio-label">
+                        <span class="label-text">M</span>
+                      </label>
+                    </div>
+
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-l" class="purpose-radio-input" value="L">
+                      <label for="opt-chaleco-l" class="purpose-radio-label">
+                        <span class="label-text">L</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-xl" class="purpose-radio-input" value="XL">
+                      <label for="opt-chaleco-xl" class="purpose-radio-label">
+                        <span class="label-text">XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-2xl" class="purpose-radio-input" value="2XL">
+                      <label for="opt-chaleco-2xl" class="purpose-radio-label">
+                        <span class="label-text">2XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-3xl" class="purpose-radio-input" value="3XL">
+                      <label for="opt-chaleco-3xl" class="purpose-radio-label">
+                        <span class="label-text">3XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-chaleco" id="opt-chaleco-4xl" class="purpose-radio-input" value="4XL">
+                      <label for="opt-chaleco-4xl" class="purpose-radio-label">
+                        <span class="label-text">4XL</span>
+                      </label>
+                    </div>              
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Talla para casaca -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="opt-casaca">Seleccione la talla de su casaca</label>
+                  <div class="purpose-radios-wrapper">
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-2xs" class="purpose-radio-input" value="2XS">
+                      <label for="opt-casaca-2xs" class="purpose-radio-label">
+                        <span class="label-text">2XS</span>
+                      </label>
+                    </div>
+                    
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-xs" class="purpose-radio-input" value="XS">
+                      <label for="opt-casaca-xs" class="purpose-radio-label">
+                        <span class="label-text">XS</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-s" class="purpose-radio-input" value="S">
+                      <label for="opt-casaca-s" class="purpose-radio-label">
+                        <span class="label-text">S</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-m" class="purpose-radio-input" value="M">
+                      <label for="opt-casaca-m" class="purpose-radio-label">
+                        <span class="label-text">M</span>
+                      </label>
+                    </div>
+
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-l" class="purpose-radio-input" value="L">
+                      <label for="opt-casaca-l" class="purpose-radio-label">
+                        <span class="label-text">L</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-xl" class="purpose-radio-input" value="XL">
+                      <label for="opt-casaca-xl" class="purpose-radio-label">
+                        <span class="label-text">XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-2xl" class="purpose-radio-input" value="2XL">
+                      <label for="opt-casaca-2xl" class="purpose-radio-label">
+                        <span class="label-text">2XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-3xl" class="purpose-radio-input" value="3XL">
+                      <label for="opt-casaca-3xl" class="purpose-radio-label">
+                        <span class="label-text">3XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-casaca" id="opt-casaca-4xl" class="purpose-radio-input" value="4XL">
+                      <label for="opt-casaca-4xl" class="purpose-radio-label">
+                        <span class="label-text">4XL</span>
+                      </label>
+                    </div>              
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Talla para blusa -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="opt-blusa">Seleccione la talla de su blusa</label>
+                  <div class="purpose-radios-wrapper">
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-2xs" class="purpose-radio-input" value="2XS">
+                      <label for="opt-blusa-2xs" class="purpose-radio-label">
+                        <span class="label-text">2XS</span>
+                      </label>
+                    </div>
+                    
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-xs" class="purpose-radio-input" value="XS">
+                      <label for="opt-blusa-xs" class="purpose-radio-label">
+                        <span class="label-text">XS</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-s" class="purpose-radio-input" value="S">
+                      <label for="opt-blusa-s" class="purpose-radio-label">
+                        <span class="label-text">S</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-m" class="purpose-radio-input" value="M">
+                      <label for="opt-blusa-m" class="purpose-radio-label">
+                        <span class="label-text">M</span>
+                      </label>
+                    </div>
+
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-l" class="purpose-radio-input" value="L">
+                      <label for="opt-blusa-l" class="purpose-radio-label">
+                        <span class="label-text">L</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-xl" class="purpose-radio-input" value="XL">
+                      <label for="opt-blusa-xl" class="purpose-radio-label">
+                        <span class="label-text">XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-2xl" class="purpose-radio-input" value="2XL">
+                      <label for="opt-blusa-2xl" class="purpose-radio-label">
+                        <span class="label-text">2XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-3xl" class="purpose-radio-input" value="3XL">
+                      <label for="opt-blusa-3xl" class="purpose-radio-label">
+                        <span class="label-text">3XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-blusa" id="opt-blusa-4xl" class="purpose-radio-input" value="4XL">
+                      <label for="opt-blusa-4xl" class="purpose-radio-label">
+                        <span class="label-text">4XL</span>
+                      </label>
+                    </div>              
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Prenda de preferencia (Sólo mujeres)-->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">   
+                  <label for="opt-preferencia">Su KIT le permite elegir entre faldas y pantalones, usted desea...</label>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="opt-preferencia" value="2 PANTALONES">2 Pantalones
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="opt-preferencia" value="2 FALDAS">2 Faldas
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="opt-preferencia" value="1 FALDA 1 PANTALÓN">1 Falda y 1 pantalón
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Talla para pantalón -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="opt-pantalon">Seleccione la talla de su pantalon</label>
+                  <div class="purpose-radios-wrapper">
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-2xs" class="purpose-radio-input" value="2XS">
+                      <label for="opt-pantalon-2xs" class="purpose-radio-label">
+                        <span class="label-text">2XS</span>
+                      </label>
+                    </div>
+                    
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-xs" class="purpose-radio-input" value="XS">
+                      <label for="opt-pantalon-xs" class="purpose-radio-label">
+                        <span class="label-text">XS</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-s" class="purpose-radio-input" value="S">
+                      <label for="opt-pantalon-s" class="purpose-radio-label">
+                        <span class="label-text">S</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-m" class="purpose-radio-input" value="M">
+                      <label for="opt-pantalon-m" class="purpose-radio-label">
+                        <span class="label-text">M</span>
+                      </label>
+                    </div>
+
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-l" class="purpose-radio-input" value="L">
+                      <label for="opt-pantalon-l" class="purpose-radio-label">
+                        <span class="label-text">L</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-xl" class="purpose-radio-input" value="XL">
+                      <label for="opt-pantalon-xl" class="purpose-radio-label">
+                        <span class="label-text">XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-2xl" class="purpose-radio-input" value="2XL">
+                      <label for="opt-pantalon-2xl" class="purpose-radio-label">
+                        <span class="label-text">2XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-3xl" class="purpose-radio-input" value="3XL">
+                      <label for="opt-pantalon-3xl" class="purpose-radio-label">
+                        <span class="label-text">3XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-pantalon" id="opt-pantalon-4xl" class="purpose-radio-input" value="4XL">
+                      <label for="opt-pantalon-4xl" class="purpose-radio-label">
+                        <span class="label-text">4XL</span>
+                      </label>
+                    </div>              
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Talla para falda -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="opt-falda">Seleccione la talla de su falda</label>
+                  <div class="purpose-radios-wrapper">
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-2xs" class="purpose-radio-input" value="2XS">
+                      <label for="opt-falda-2xs" class="purpose-radio-label">
+                        <span class="label-text">2XS</span>
+                      </label>
+                    </div>
+                    
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-xs" class="purpose-radio-input" value="XS">
+                      <label for="opt-falda-xs" class="purpose-radio-label">
+                        <span class="label-text">XS</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-s" class="purpose-radio-input" value="S">
+                      <label for="opt-falda-s" class="purpose-radio-label">
+                        <span class="label-text">S</span>
+                      </label>
+                    </div>
+  
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-m" class="purpose-radio-input" value="M">
+                      <label for="opt-falda-m" class="purpose-radio-label">
+                        <span class="label-text">M</span>
+                      </label>
+                    </div>
+
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-l" class="purpose-radio-input" value="L">
+                      <label for="opt-falda-l" class="purpose-radio-label">
+                        <span class="label-text">L</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-xl" class="purpose-radio-input" value="XL">
+                      <label for="opt-falda-xl" class="purpose-radio-label">
+                        <span class="label-text">XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-2xl" class="purpose-radio-input" value="2XL">
+                      <label for="opt-falda-2xl" class="purpose-radio-label">
+                        <span class="label-text">2XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-3xl" class="purpose-radio-input" value="3XL">
+                      <label for="opt-falda-3xl" class="purpose-radio-label">
+                        <span class="label-text">3XL</span>
+                      </label>
+                    </div>              
+                    <div class="purpose-radio">
+                      <input type="radio" name="opt-falda" id="opt-falda-4xl" class="purpose-radio-input" value="4XL">
+                      <label for="opt-falda-4xl" class="purpose-radio-label">
+                        <span class="label-text">4XL</span>
+                      </label>
+                    </div>              
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
         <h3>
