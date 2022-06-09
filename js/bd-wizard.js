@@ -63,4 +63,3 @@ $('#employeeNumber').on('change', function(e) {
 $('#workEmailAddress').on('change', function(e) {
     $('#enteredWorkEmailAddress').text(e.target.value || 'willms_abby@company.com');
 });
-
