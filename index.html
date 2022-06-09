@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bd-wizard.css">
+  <link rel="stylesheet" href="css/select2.min.css">  
+  <link rel="stylesheet" href="css/select2-bootstrap4.css">
+</head>
+<body>
+  <main class="my-5">
+    <div class="container">
+      <div id="wizard">
+        <h3>
+          <div class="media">
+            <div class="bd-wizard-step-icon"><i class="mdi mdi-account-outline"></i></div>
+            <div class="media-body">
+              <div class="bd-wizard-step-title">Personal</div>
+              <div class="bd-wizard-step-subtitle">Paso 1</div>
+            </div>
+          </div>
+        </h3>
+        <section>
+          <div class="content-wrapper">
+            <h4 class="section-heading">Ingrese sus datos personales</h4>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <label for="cod">Número de registro</label>
+                <input type="text" name="cod" id="cod" class="form-control" placeholder="Ejemplo: P054123">
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="dni">DNI</label>
+                <input type="text" name="dni" id="dni" class="form-control" placeholder="Ejemplo: 70124512">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <label for="nombres">Nombres</label>
+                <input type="text" name="nombres" id="nombres" class="form-control" placeholder="Ejemplo: Juan Antonio">
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Ejemplo: Perez Silva">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <label for="celular">Celular</label>
+                <input type="text" name="celular" id="celular" class="form-control" placeholder="Ejemplo: 992920290">
+              </div>
+              <div class="form-group col-lg-6">
+                <label for="correo">Correo institucional</label>
+                <input type="email" name="correo" id="correo" class="form-control" placeholder="Ejemplo: usuario@bbva.com">
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">   
+                  <label for="opt-genero">Género</label>               
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="opt-genero" value="MASCULINO">Masculino
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="opt-genero" value="FEMENINO">Femenino
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="estatura">Estatura</label>
+                  <div class="mx-auto pb-2" style="width: 70px;"><kbd class="output" for="estatura"></kbd></div>
+                  <input type="range" class="custom-range" id="rango" name="estatura" min="100" max="230" step="1">                  
+                </div>
+              </div> 
+
+            </div>
+
+          </div>
+        </section>
+        <h3>
+          <div class="media">
+            <div class="bd-wizard-step-icon"><i class="mdi mdi-bank"></i></div>
+            <div class="media-body">
+              <div class="bd-wizard-step-title">Oficina</div>
+              <div class="bd-wizard-step-subtitle">Paso 2</div>
+            </div>
+          </div>
+        </h3>
+        <section>
+          <div class="content-wrapper">
+            <h4 class="section-heading">Ingrese la información del lugar de trabajo</h4>
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <label>Nombre de oficina</label>
+                  <select id="colaborador-select" name="colaborador-select" data-placeholder="Seleccione una oficina" data-allow-clear="1">
+                      <option id="" region=""></option>                      
+                  </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="region">Región de oficina</label>
+                <input type="text" name="region" id="region" class="form-control" placeholder="Ejemplo: LIMA" readonly>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="employeeNumber" class="sr-only">Employee Number</label>
+                <input type="text" name="employeeNumber" id="employeeNumber" class="form-control" placeholder="Employee Number">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="workEmailAddress" class="sr-only">Work Email Address</label>
+                <input type="email" name="workEmailAddress" id="workEmailAddress" class="form-control" placeholder="Work Email Address">
+              </div>
+            </div>
+          </div>
+        </section>
+        <h3>
+          <div class="media">
+            <div class="bd-wizard-step-icon"><i class="mdi mdi-account-check-outline"></i></div>
+            <div class="media-body">
+              <div class="bd-wizard-step-title">Review </div>
+              <div class="bd-wizard-step-subtitle">Step 3</div>
+            </div>
+          </div>
+        </h3>
+        <section>
+          <div class="content-wrapper">
+          <h4 class="section-heading mb-5">Review your Details</h4>
+          <h6 class="font-weight-bold">Personal Details</h6>
+          <p class="mb-4"><span id="enteredFirstName">Cha</span> <span id="enteredLastName">Ji-Hun C</span> <br>
+            Phone: <span id="enteredPhoneNumber">+230-582-6609</span> <br>
+            Email: <span id="enteredEmailAddress">willms_abby@gmail.com</span></p>
+          <h6 class="font-weight-bold">Employment Details</h6>
+          <p class="mb-0"><span id="enteredDesignation">Junior Developer</span> - <span id="enteredDepartment">UI Development</span> <br>
+            Phone: <span id="enteredEmployeeNumber">JDUI36849</span> <br>
+            Email: <span id="enteredWorkEmailAddress">willms_abby@company.com</span></p>
+          </div>
+        </section>
+        <h3>
+          <div class="media">
+            <div class="bd-wizard-step-icon"><i class="mdi mdi-emoticon-outline"></i></div>
+            <div class="media-body">
+              <div class="bd-wizard-step-title">Submit</div>
+              <div class="bd-wizard-step-subtitle">Step 4</div>
+            </div>
+          </div>
+        </h3>
+        <section>
+          <div class="content-wrapper">
+            <h4 class="section-heading mb-5">Accept agreement and Submit</h4>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                I hereby declare that I had read all the <a href="#!">terms and conditions</a>  and all the details provided my me in this form are true.
+              </label>
+            </div>
+          </div>  
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.steps.min.js"></script>
+  <script src="js/ajax.js"></script>
+  <script src="js/vendor/select2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/bd-wizard.js"></script>
+</html>
