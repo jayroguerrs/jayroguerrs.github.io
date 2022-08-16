@@ -16,10 +16,10 @@ var KTPasswordResetGeneral = function() {
 					'email': {
                         validators: {
 							notEmpty: {
-								message: 'Email address is required'
+								message: 'El correo es necesario'
 							},
                             emailAddress: {
-								message: 'The value is not a valid email address'
+								message: 'El correo ingresado no es válido'
 							}
 						}
 					} 
@@ -57,10 +57,10 @@ var KTPasswordResetGeneral = function() {
 
                         // Show message popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                         Swal.fire({
-                            text: "You have successfully logged in!",
+                            text: "Se ha enviado el correo exitosamente, por favor revise su bandeja de entrada",
                             icon: "success",
                             buttonsStyling: false,
-                            confirmButtonText: "Ok, got it!",
+                            confirmButtonText: "Ok, gracias",
                             customClass: {
                                 confirmButton: "btn btn-primary"
                             }
@@ -68,16 +68,20 @@ var KTPasswordResetGeneral = function() {
                             if (result.isConfirmed) { 
                                 form.querySelector('[name="email"]').value= "";                          
                                 //form.submit();
+                                var redirectUrl = form.getAttribute('data-kt-redirect-url');
+                                if (redirectUrl) {
+                                    location.href = redirectUrl;
+                                }
                             }
                         });
                     }, 1500);   						
                 } else {
                     // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                     Swal.fire({
-                        text: "Sorry, looks like there are some errors detected, please try again.",
+                        text: "Lo siento, al parecer hay campos necesarios que faltan colocar",
                         icon: "error",
                         buttonsStyling: false,
-                        confirmButtonText: "Ok, got it!",
+                        confirmButtonText: "Ok, gracias",
                         customClass: {
                             confirmButton: "btn btn-primary"
                         }
