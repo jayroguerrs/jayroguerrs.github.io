@@ -14,20 +14,17 @@ var KTSigninGeneral = function() {
 			form,
 			{
 				fields: {					
-					'email': {
+					'user': {
                         validators: {
 							notEmpty: {
-								message: 'Email address is required'
-							},
-                            emailAddress: {
-								message: 'The value is not a valid email address'
+								message: 'El usuario es necesario'
 							}
 						}
 					},
                     'password': {
                         validators: {
                             notEmpty: {
-                                message: 'The password is required'
+                                message: 'La contraseña es necesaria'
                             }
                         }
                     } 
@@ -66,16 +63,16 @@ var KTSigninGeneral = function() {
 
                         // Show message popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                         Swal.fire({
-                            text: "You have successfully logged in!",
+                            text: "Su registro ha sido exitoso",
                             icon: "success",
                             buttonsStyling: false,
-                            confirmButtonText: "Ok, got it!",
+                            confirmButtonText: "Ok, gracias!",
                             customClass: {
                                 confirmButton: "btn btn-primary"
                             }
                         }).then(function (result) {
                             if (result.isConfirmed) { 
-                                form.querySelector('[name="email"]').value= "";
+                                form.querySelector('[name="user"]').value= "";
                                 form.querySelector('[name="password"]').value= "";  
                                                               
                                 //form.submit(); // submit form
@@ -89,10 +86,10 @@ var KTSigninGeneral = function() {
                 } else {
                     // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                     Swal.fire({
-                        text: "Sorry, looks like there are some errors detected, please try again.",
+                        text: "Lo siento, algunos de los valores son inválidos, por favor intente nuevamente",
                         icon: "error",
                         buttonsStyling: false,
-                        confirmButtonText: "Ok, got it!",
+                        confirmButtonText: "Ok, gracias!",
                         customClass: {
                             confirmButton: "btn btn-primary"
                         }
