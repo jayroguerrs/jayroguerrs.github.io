@@ -5,41 +5,40 @@ var KTPasswordResetGeneral = function() {
     // Elements
     var form;
     var submitButton;
-	var validator;
+    var validator;
 
     var handleForm = function(e) {
         // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
         validator = FormValidation.formValidation(
-			form,
-			{
-				fields: {					
-					'email': {
+            form, {
+                fields: {
+                    'email': {
                         validators: {
-							notEmpty: {
-								message: 'El correo es necesario'
-							},
+                            notEmpty: {
+                                message: 'El correo es necesario'
+                            },
                             emailAddress: {
-								message: 'El correo ingresado no es válido'
-							}
-						}
-					} 
-				},
-				plugins: {
-					trigger: new FormValidation.plugins.Trigger(),
-					bootstrap: new FormValidation.plugins.Bootstrap5({
+                                message: 'El correo ingresado no es válido'
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    trigger: new FormValidation.plugins.Trigger(),
+                    bootstrap: new FormValidation.plugins.Bootstrap5({
                         rowSelector: '.fv-row',
-						eleInvalidClass: '',
+                        eleInvalidClass: '',
                         eleValidClass: ''
                     })
-				}
-			}
-		);		
+                }
+            }
+        );
 
-        submitButton.addEventListener('click', function (e) {
+        submitButton.addEventListener('click', function(e) {
             e.preventDefault();
 
             // Validate form
-            validator.validate().then(function (status) {
+            validator.validate().then(function(status) {
                 if (status == 'Valid') {
                     // Show loading indication
                     submitButton.setAttribute('data-kt-indicator', 'on');
@@ -64,17 +63,18 @@ var KTPasswordResetGeneral = function() {
                             customClass: {
                                 confirmButton: "btn btn-primary"
                             }
-                        }).then(function (result) {
-                            if (result.isConfirmed) { 
-                                form.querySelector('[name="email"]').value= "";                          
+                        }).then(function(result) {
+                            if (result.isConfirmed) {
+                                form.querySelector('[name="email"]').value = "";
                                 //form.submit();
+
                                 var redirectUrl = form.getAttribute('data-kt-redirect-url');
                                 if (redirectUrl) {
                                     location.href = redirectUrl;
                                 }
                             }
                         });
-                    }, 1500);   						
+                    }, 1500);
                 } else {
                     // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                     Swal.fire({
@@ -87,8 +87,8 @@ var KTPasswordResetGeneral = function() {
                         }
                     });
                 }
-            });  
-		});
+            });
+        });
     }
 
     // Public Functions
